@@ -1,4 +1,4 @@
-import { getTree } from './parser';
+import { getTree, htmlToNode } from './parser';
 import { welcomeComponent, customComponent } from './constants';
 
 describe('Get Tree', () => {
@@ -39,6 +39,20 @@ describe('Get Tree', () => {
           { children: [], name: 'h1' },
         ],
         name: 'div',
+      },
+    ]);
+  });
+
+  it('should parse a simple html string to a tree of nodes', () => {
+    const html = '<div><h1>Hello World</h1><p>Paragraph</p></div>';
+    const result = htmlToNode(html);
+    expect(result).toEqual([
+      {
+        name: 'div',
+        children: [
+          { name: 'h1', children: [] },
+          { name: 'p', children: [] },
+        ],
       },
     ]);
   });

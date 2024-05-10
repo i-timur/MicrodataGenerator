@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "description": "",
   "main": "./dist/index.js",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/"
+    ]
+  },
   "scripts": {
     "test": "jest"
   },
@@ -14,6 +19,7 @@
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-typescript": "^7.24.1",
     "@types/cheerio": "^0.22.35",
+    "@types/deep-equal": "^1.0.4",
     "@types/jest": "^29.5.12",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
@@ -21,6 +27,7 @@
   },
   "dependencies": {
     "@babel/parser": "^7.24.5",
-    "cheerio": "^1.0.0-rc.12"
+    "cheerio": "^1.0.0-rc.12",
+    "deep-equal": "^2.2.3"
   }
 }

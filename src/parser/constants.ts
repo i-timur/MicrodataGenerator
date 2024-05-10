@@ -32,3 +32,14 @@ export const customComponent = `export const Welcome = (props) => {
 export default Welcome;
 `;
 
+export const welcomeComponentHtml = `
+<div>
+  <div>
+    <p>dawwadwad</p>
+    <div>
+      <span>awdwad</span>
+    </div>
+  </div>
+  <h1>Hello, {props.name}</h1>
+</div>
+`
