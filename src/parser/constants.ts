@@ -15,6 +15,23 @@ export const welcomeComponent = `export const Welcome = (props) => {
 export default Welcome;
 `;
 
+export const welcomeComponentAnnotated = `export const Welcome = (props) => {
+  return (
+    <div itemscope itemtype="https://schema.org/Product">
+      <div>
+        <p itemprop="name">dawwadwad</p>
+        <div>
+          <span>awdwad</span>
+        </div>
+      </div>
+      <h1>Hello, {props.name}</h1>
+    </div>
+  );
+};
+
+export default Welcome;
+`;
+
 export const customComponent = `export const Welcome = (props) => {
   return (
     <div>
@@ -33,9 +50,9 @@ export default Welcome;
 `;
 
 export const welcomeComponentHtml = `
-<div>
+<div itemscope itemtype="https://schema.org/Product">
   <div>
-    <p>dawwadwad</p>
+    <p itemprop="name">dawwadwad</p>
     <div>
       <span>awdwad</span>
     </div>
